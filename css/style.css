@@ -1,35 +1,17 @@
 :root {
-  --main-hero-text-color: #ffffff;
-  --text-color-main: #212121;
-  --text-color-main-hover: #2196f3;
-  --text-color-secondary: #757575;
-  --text-color-darkgray: #2f303a;
-
-  --button-background-color: #2196f3;
-  --alternative-button-text-color: #ffffff;
-
-  --main-background-color: #ffffff;
-  --dark-background-color: #2f303a;
+  --white-color: #ffffff;
+  --black-text-color-main: #212121;
+  --blue-color-hover: #2196f3;
+  --gray-color: #757575;
+  --darkgray-color: #2f303a;
+  --black-color: #000000;
   --gray-background-color: #f5f4fa;
 }
 
 body {
   font-family: Roboto, sans-serif;
-  background-color: var(--main-background-color);
-  color: var(--text-color-main);
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style-type: none; /* Убираем маркеры */
-}
-
-ul {
-  margin-left: 0; /* Отступ слева в браузере IE и Opera */
-  padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+  background-color: var(--white-color);
+  color: var(--black-text-color-main);
 }
 
 /*--Logo styles-------------------------------------*/
@@ -39,31 +21,35 @@ ul {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--blue-color-hover);
 }
 
-.logo-web {
-  color: var(--button-background-color);
+.logo-studio-header {
+  color: var(--black-color);
 }
 
-.logo-studio {
-  color: #000000;
+.logo-studio-footer {
+  color: var(--white-color);
 }
 
 /*--Navigation styles-------------------------------------*/
-.navigation-links-list li,
-.navigation-contact-list li {
-  display: inline;
+.navigation-links-list,
+.navigation-contact-list {
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.navigation-links-list-item {
+.navigation-links-item {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.navigation-links-list-item a {
+.nav-link-reference {
   color: inherit;
+  text-decoration: none;
 }
 
 .navigation-contact-list {
@@ -73,26 +59,28 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.navigation-contact-list a {
-  color: var(--text-color-darkgray);
+.nav-contact-reference {
+  color: var(--gray-color);
+  text-decoration: none;
 }
 
-.navigation-links-list-item a:hover,
-.navigation-links-list-item a:focus,
-.navigation-contact-list a:hover,
-.navigation-contact-list a:focus {
-  color: var(--text-color-main-hover);
+.nav-link-reference:hover,
+.nav-link-reference:focus,
+.nav-contact-reference:hover,
+.nav-contact-reference:focus {
+  color: var(--blue-color-hover);
+  text-decoration: none;
 }
 
 /*--Hero styles-------------------------------------*/
 .hero-section,
 .footer {
-  background-color: var(--dark-background-color);
+  background-color: var(--darkgray-color);
 }
 
 .hero-section-title {
   font-weight: 900;
-  color: var(--main-hero-text-color);
+  color: var(--white-color);
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
@@ -101,17 +89,22 @@ ul {
 }
 
 .hero-section-button {
-  background: var(--button-background-color);
-  color: var(--main-hero-text-color);
+  background: var(--blue-color-hover);
+  color: var(--white-color);
   cursor: pointer;
 }
 
 /*--Features styles-------------------------------------*/
-.features-list li {
-  display: inline;
+.features-list {
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.features-list-item-header {
+.features-item {
+  list-style-type: none;
+}
+
+.features-item-header {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -120,7 +113,7 @@ ul {
   color: inherit;
 }
 
-.features-list-item-text {
+.features-item-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -129,7 +122,12 @@ ul {
 
 /*--"What we do" section styles-------------------------------------*/
 .what-we-do-list {
-  display: inline;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.what-we-do-item {
+  list-style-type: none;
 }
 
 .what-we-do-title {
@@ -146,6 +144,11 @@ ul {
   background-color: var(--gray-background-color);
 }
 
+.our-team-list {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .our-team-title {
   font-weight: 700;
   font-size: 36px;
@@ -155,30 +158,34 @@ ul {
   color: inherit;
 }
 
-.our-team-list-item {
+.our-team-item {
   font-style: normal;
   font-size: 16px;
   line-height: 1.18;
-  /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
+  list-style-type: none;
 }
 
-.our-team-list-item-name {
+.our-team-item-name {
   font-weight: 500;
   color: inherit;
 }
 
-.our-team-list-item-position {
+.our-team-item-position {
   color: var(--text-color-secondary);
 }
 
 /*--Portfolio Section styles-------------------------------------*/
-.portfolio-button-list li {
-  display: inline;
+.portfolio-btn-item {
+  list-style-type: none;
 }
 
-.portfolio-button-list-item {
+.portfolio-list {
+  list-style-type: none;
+}
+
+.portfolio-btn {
   background: var(--gray-background-color);
   border-radius: 4px;
   font-weight: 500;
@@ -190,17 +197,18 @@ ul {
   cursor: pointer;
 }
 
-.portfolio-button-list-item:hover,
-.portfolio-button-list-item:focus {
-  background: var(--button-background-color);
-  color: var(--alternative-button-text-color);
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  background: var(--blue-color-hover);
+  color: var(--white-color);
 }
 
-.portfolio-list-item a {
+.portfolio-item {
   color: inherit;
+  text-decoration: none;
 }
 
-.portfolio-list-item-name {
+.portfolio-item-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -208,7 +216,7 @@ ul {
   color: inherit;
 }
 
-.portfolio-list-item-category {
+.portfolio-item-category {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -216,21 +224,28 @@ ul {
 }
 
 /*--Footer Section styles-------------------------------------*/
-.address-list-item {
+.address-list {
+  margin-left: 0;
+  padding-left: 0;
+}
+.address-item {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  list-style-type: none;
 }
 
-.address-list-item a {
-  color: rgba(255, 255, 255, 0.6);
+.footer-contact-reference {
+  color: var(--gray-color);
+  text-decoration: none;
 }
 
-.address-list-item a:hover,
-.address-list-item a:focus {
-  color: var(--text-color-main-hover);
+.footer-contact-reference:hover,
+.footer-contact-reference:focus {
+  color: var(--blue-color-hover);
+  text-decoration: none;
 }
 
 .actual-address {
-  color: #ffffff;
+  color: var(--white-color);
 }
